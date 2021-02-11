@@ -1,0 +1,12 @@
+name: gitleaks
+
+on: [push,pull_request]
+
+jobs:
+  gitleaks:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: gitleaks-action
+      # switch to zricethezav/gitleaks-action@master after patch update
+      uses: yuasabe/gitleaks-action@patch-1
